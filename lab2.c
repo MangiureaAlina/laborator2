@@ -1,20 +1,22 @@
-#include <stdlib.h>
+ #include <stdlib.h>
 #include <stdio.h>
 
-int function(int x){
-	x=x-2;
-	x=function(x);
-	return x;
+int function(int x)
+{
+    x=x-2;
+    if(x>1)
+        x=function(x);
+    return 30-x;
 }
 
-int main(){
-	int a=30, i=0;
-	
-	while (a>0){
-		a=function(a);
-		i++;
-	}
-	printf("%d", i);
-	return 0;	
+int main()
+{
+    int a=30, i=0;
+
+
+    i=function(a);
+
+    printf("%d", i);
+    return 0;
 }
 
